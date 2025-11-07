@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | MJ Electric Secure</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background-color: #1f1f1f;
+      color: #eaeaea;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      color: #00bfff;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      margin-top: 30px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00bfff;
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00bfff;
+    }
+    .lightbox:target {
+      display: flex;
+    }
+    .close {
+      position: absolute;
+      top: 40px;
+      right: 60px;
+      font-size: 35px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Work Gallery</h1>
+  <div class="gallery">
+    <a href="#photo1"><img src="assets/gallery/photo1.jpg" alt="Project 1"></a>
+    <a href="#photo2"><img src="assets/gallery/photo2.jpg" alt="Project 2"></a>
+    <a href="#photo3"><img src="assets/gallery/photo3.jpg" alt="Project 3"></a>
+    <a href="#photo4"><img src="assets/gallery/photo4.jpg" alt="Project 4"></a>
+    <a href="#photo5"><img src="assets/gallery/photo5.jpg" alt="Project 5"></a>
+    <a href="#photo6"><img src="assets/gallery/photo6.jpg" alt="Project 6"></a>
+  </div>
+  <div id="photo1" class="lightbox"><a href="#" class="close">&times;</a><img src="assets/gallery/photo1.jpg" alt="Project 1"></div>
+  <div id="photo2" class="lightbox"><a href="#" class="close">&times;</a><img src="assets/gallery/photo2.jpg" alt="Project 2"></div>
+  <div id="photo3" class="lightbox"><a href="#" class="close">&times;</a><img src="assets/gallery/photo3.jpg" alt="Project 3"></div>
+  <div id="photo4" class="lightbox"><a href="#" class="close">&times;</a><img src="assets/gallery/photo4.jpg" alt="Project 4"></div>
+  <div id="photo5" class="lightbox"><a href="#" class="close">&times;</a><img src="assets/gallery/photo5.jpg" alt="Project 5"></div>
+  <div id="photo6" class="lightbox"><a href="#" class="close">&times;</a><img src="assets/gallery/photo6.jpg" alt="Project 6"></div>
+</body>
+</html>
